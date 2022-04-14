@@ -43,15 +43,15 @@ static int getBombCount() {
 }
 static void print() {					
 	system("cls");
-	printf("   ë°œê²¬:%2d   ì „ì²´:%2d\n", getBombCount(), nBomb);
-	printf("   â‘ â‘¡â‘¢â‘£â‘¤â‘¥â‘¦â‘§â‘¨\n");
+	printf("   ¹ß°ß:%2d   ÀüÃ¼:%2d\n", getBombCount(), nBomb);
+	printf("   ¨ç¨è¨é¨ê¨ë¨ì¨í¨î¨ï\n");
 	for (int y = 0; y < ny; y++) {
 		printf("%2c ", 'A' + y);
 		for (int x = 0; x < nx; x++) {
-			if (mask(x, y) == Hide)	printf("â–¡");		
-			else if (mask(x, y) == Flag) printf("Â¤");	
+			if (mask(x, y) == Hide)	printf("¡à");		
+			else if (mask(x, y) == Flag) printf("¢´");	
 			else {									
-				if (isBomb(x, y)) printf("â€»");		
+				if (isBomb(x, y)) printf("¡Ø");		
 				else if (isEmpty(x, y)) printf("  ");	
 				else printf("%2d", label(x, y));		
 			}
@@ -89,7 +89,7 @@ static void init(int total = 9) {
 				label(x, y) = countNbrBombs(x, y);
 }
 static bool getPos(int& x, int& y) {		 
-	printf("\nì§€ë¢°(P)í–‰(A-I)ì—´(1-9)\n      ìž…ë ¥ --> ");
+	printf("\nÁö·Ú(P)Çà(A-I)¿­(1-9)\n      ÀÔ·Â --> ");
 	bool isBomb = false;
 	y = toupper(getch()) - 'A';			
 	if (y == 'P' - 'A') {
@@ -120,6 +120,6 @@ void playMineSweeper(int total) {
 	} while (status == 0);			
 	print();
 	if (status < 0) 				
-		printf("\nì‹¤íŒ¨: ì§€ë¢° í­ë°œ!!!\n\n");
-	else	printf("\nì„±ê³µ: íƒìƒ‰ ì„±ê³µ!!!\n\n");
+		printf("\n½ÇÆÐ: Áö·Ú Æø¹ß!!!\n\n");
+	else	printf("\n¼º°ø: Å½»ö ¼º°ø!!!\n\n");
 }

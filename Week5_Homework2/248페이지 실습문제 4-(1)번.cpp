@@ -43,7 +43,7 @@ static int getBombCount() {
 }
 static void print() {
 	system("cls");
-	printf("   ë°œê²¬:%2d   ì „ì²´:%2d\n", getBombCount(), nBomb);
+	printf("   ¹ß°ß:%2d   ÀüÃ¼:%2d\n", getBombCount(), nBomb);
 	
 	printf("   ");
 	for (int i = 0; i < nx; i++) printf("%2d", i + 1);
@@ -53,10 +53,10 @@ static void print() {
 		//printf("%2c ", 'A' + y);
 		printf("%2d ", y + 1);
 		for (int x = 0; x < nx; x++) {
-			if (mask(x, y) == Hide)	printf("â–¡");
-			else if (mask(x, y) == Flag) printf("â—†");
+			if (mask(x, y) == Hide)	printf("¡à");
+			else if (mask(x, y) == Flag) printf("¡ß");
 			else {
-				if (isBomb(x, y)) printf("â€»");
+				if (isBomb(x, y)) printf("¡Ø");
 				else if (isEmpty(x, y)) printf("  ");
 				else printf("%2d", label(x, y));
 			}
@@ -99,7 +99,7 @@ static void init(int w, int h, int total = 9) {
 
 static bool getPos(int& x, int& y) {		 
 	char str[80], opt[3];
-	printf("\n í–‰ë²ˆí˜¸ ì—´ë²ˆí˜¸ [ì§€ë¢°:P] <enter> --> ");
+	printf("\n Çà¹øÈ£ ¿­¹øÈ£ [Áö·Ú:P] <enter> --> ");
 	gets_s(str);
 
 	int ret = sscanf(str, "%d%d%s", &y, &x, opt);
@@ -131,6 +131,6 @@ void playMineSweeper(int width, int height, int total) {
 	} while (status == 0);			
 	print();
 	if (status < 0) 				
-		printf("\nì‹¤íŒ¨: ì§€ë¢° í­ë°œ!!!\n\n");
-	else	printf("\nì„±ê³µ: íƒìƒ‰ ì„±ê³µ!!!\n\n");
+		printf("\n½ÇÆÐ: Áö·Ú Æø¹ß!!!\n\n");
+	else	printf("\n¼º°ø: Å½»ö ¼º°ø!!!\n\n");
 }

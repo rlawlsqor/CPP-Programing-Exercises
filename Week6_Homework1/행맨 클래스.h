@@ -60,6 +60,6 @@ public:
 			guess();
 		}
 		print();
-		cout << "\n\t" << ((nTries == maxTries) ? "ì‹¤íŒ¨" : "ì •ë‹µ") << endl;
+		cout << "\n\t" << ((nTries == maxTries) ? "½ÇÆĞ" : "Á¤´ä") << endl;
 	}
 };

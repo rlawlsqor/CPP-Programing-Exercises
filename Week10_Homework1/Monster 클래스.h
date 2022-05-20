@@ -4,8 +4,8 @@
 
 class Monster {
 protected:
-	string name, icon;	// ëª¬ìŠ¤í„° ì´ë¦„ê³¼ í™”ë©´ ì¶œë ¥ìš© ì•„ì´ì½˜
-	int x, y, nItem;		// í˜„ì¬ ìœ„ì¹˜ì™€ ë¨¹ì€ ì•„ì´í…œ ìˆ˜
+	string name, icon;	// ¸ó½ºÅÍ ÀÌ¸§°ú È­¸é Ãâ·Â¿ë ¾ÆÀÌÄÜ
+	int x, y, nItem;		// ÇöÀç À§Ä¡¿Í ¸ÔÀº ¾ÆÀÌÅÛ ¼ö
 
 	void clip(int maxx, int maxy) {
 		if (x < 0) x = 0;
@@ -20,11 +20,11 @@ protected:
 		}
 	}
 public:
-	Monster(string n = "ë‚˜ê´´ë¬¼", string i = "â€»", int px = 0, int py = 0)
+	Monster(string n = "³ª±«¹°", string i = "¡Ø", int px = 0, int py = 0)
 		: name(n), icon(i), x(px), y(py), nItem(0) {}
-	virtual ~Monster() { cout << "\t" << name << icon << " ë¬¼ëŸ¬ê°‘ë‹ˆë‹¤~~~\n"; }
+	virtual ~Monster() { cout << "\t" << name << icon << " ¹°·¯°©´Ï´Ù~~~\n"; }
 
-	void draw(Canvas &canvas) { canvas.draw(x, y, icon); }
+	void draw(Canvas& canvas) { canvas.draw(x, y, icon); }
 	virtual void move(int** map, int maxx, int maxy) {
 		switch (rand() % 8) {
 		case 0: y--; break;

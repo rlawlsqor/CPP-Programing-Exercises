@@ -33,10 +33,10 @@ protected:
 		else return false;
 	}
 public:
-	Monster(string n = "ë¬´ëª…ê´´ë¬¼", string i = "â€»", int x = 0, int y = 0)
+	Monster(string n = "¹«¸í±«¹°", string i = "¡Ø", int x = 0, int y = 0)
 		: name(n), icon(i), nItem(0),
 		p(x, y), q(x, y), nSleep(0), dist(0.0), total(0.0) {}
-	virtual ~Monster() { cout << icon << nItem << "ê±°ë¦¬:" << total << endl; }
+	virtual ~Monster() { cout << icon << nItem << "°Å¸®:" << total << endl; }
 
 	void draw(Canvas& canvas) { canvas.draw(p, icon); }
 	virtual void move(int** map, int maxx, int maxy) {

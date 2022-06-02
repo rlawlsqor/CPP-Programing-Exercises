@@ -9,7 +9,7 @@ struct PlayInfo {
 	string name;		
 	int nItem;		
 	double itemPerMove;	
-	PlayInfo(string na = "Ïã†Ïù∏Î•ò", int ni = 0, double ipm = 0.0)
+	PlayInfo(string na = "Ω≈¿Œ∑˘", int ni = 0, double ipm = 0.0)
 		: name(na), nItem(ni), itemPerMove(ipm) {}
 };
 
@@ -36,12 +36,12 @@ public:
 			<< MVP[i].itemPerMove << "\n";
 		os.close();
 	}
-	void print(string title = "Í≤åÏûÑ Îû≠ÌÇπ") {
+	void print(string title = "∞‘¿” ∑©≈∑") {
 		cout << endl << title << endl;
 		for (int i = 0; i < nMVP; i++)
-			cout << "[" << i + 1 << "ÏúÑ] " << MVP[i].name << "\t"
+			cout << "[" << i + 1 << "¿ß] " << MVP[i].name << "\t"
 			<< MVP[i].nItem << " " << MVP[i].itemPerMove << "\n";
-		cout << "ÏóîÌÑ∞Î•º ÏûÖÎ†•ÌïòÏÑ∏Ïöî.";
+		cout << "ø£≈Õ∏¶ ¿‘∑¬«œººø‰.";
 		getchar();
 		cout << endl;
 	}
@@ -55,7 +55,7 @@ public:
 		}
 		MVP[pos].nItem = nItem;
 		MVP[pos].itemPerMove = ipm;
-		cout << "\n[" << pos + 1 << "ÏúÑ] Ïù¥Î¶ÑÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî: ";
+		cout << "\n[" << pos + 1 << "¿ß] ¿Ã∏ß¿ª ¿‘∑¬«œººø‰: ";
 		cin >> MVP[pos].name;
 		return pos + 1;
 	}
